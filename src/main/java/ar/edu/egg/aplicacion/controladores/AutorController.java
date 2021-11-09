@@ -37,6 +37,7 @@ public class AutorController {
         modelo.addAttribute("autores", autores);
 
         modelo.put("buscarautor", "Registro exitoso");
+
         return "cargar-autor";
     }
     

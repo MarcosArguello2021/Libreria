@@ -129,33 +129,33 @@ and open the template in the editor.
                                             <form th:action="@{/libro/registro}" method="POST">
                                                 <div class="mb-0">
                                                     <label for="ISBN" class="form-label">ISBN</label>
-                                                    <input type="number" class="form-control" name="isbn">
+                                                    <input type="number" class="form-control" name="isbn" autocomplete="off" th:value="${isbn}" required>
                                                 </div>
                                                 <div class="mb-0">
                                                     <label for="Titulo" class="form-label">Titulo</label>
-                                                    <input type="text" class="form-control" name="titulo">
+                                                    <input type="text" class="form-control" name="titulo" autocomplete="off" th:value="${titulo}" required>
                                                 </div>
                                                 <div class="mb-0">
                                                     <label for="anio" class="form-label">Año</label>
-                                                    <input type="number" class="form-control" name="anio">
+                                                    <input type="number" class="form-control" name="anio" autocomplete="off" th:value="${anio}" required>
                                                 </div>
                                                 <div class="mb-0">
                                                     <label for="Ejemplares" class="form-label">Ejemplares</label>
-                                                    <input type="number" class="form-control" name="ejemplares">
+                                                    <input type="number" class="form-control" name="ejemplares" autocomplete="off" th:value="${ejemplares}" required>
                                                 </div>
                                                 <div class="mb-0">
                                                     <label for="ejemplaresPrestados" class="form-label">Ejemplares prestados</label>
-                                                    <input type="number" class="form-control" name="ejemplaresPrestados">
+                                                    <input type="number" class="form-control" name="ejemplaresPrestados" autocomplete="off" th:value="${ejemplaresPrestados}" required>
                                                 </div>
                                                 <div class="mb-0">
                                                     <label for="ejemplaresRestantes" class="form-label">Ejemplares Restantes</label>
-                                                    <input type="number" class="form-control" name="ejemplaresRestantes">
+                                                    <input type="number" class="form-control" name="ejemplaresRestantes" autocomplete="off" th:value="${ejemplaresRestantes}" required>
                                                 </div>
                                                 <div class="mb-0">
 
                                                     <label for="Autor" class="form-label">Nombre Autor</label>
 
-                                                    <select name="autor" class="form-control">
+                                                    <select name="autor" class="form-control" required>
                                                         <option value=""> -----------Seleccione un autor ó cree uno nuevo------------- </option>
                                                         <option th:each="autor : ${autores}" th:value="${autor.id}" th:text="${autor.nombre}" />
                                                     </select>
@@ -167,7 +167,7 @@ and open the template in the editor.
                                                 <div class="mb-0">
                                                     <label for="Editorial" class="form-label">Nombre Editorial</label>
 
-                                                    <select name="editorial" class="form-control">
+                                                    <select name="editorial" class="form-control" required>
                                                         <option value=""> -----------Seleccione una editorial ó cree una nueva------------- </option>
                                                         <option th:each="editorial : ${editoriales}" th:value="${editorial.id}"
                                                                 th:text="${editorial.nombre}" />
